@@ -4,13 +4,14 @@ let btn_generate = document.querySelector("#submit")
 let color1 = document.querySelector("#color-a")
 let color2 = document.querySelector("#color-b")
 let codeC = document.querySelector("#code")
+let copy = document.querySelector("#copy")
 
 let bgcode = `  background-image: linear-gradient(to bottom right, red, yellow);`
 
 
 let dir1 = "to bottom"
 let codecolor1 = "#b8c7b8"
-let codecolor2 = "#172768"
+let codecolor2 = "#4e4832"
 
 
 
@@ -26,13 +27,6 @@ function bgSet() {
 }
 
 bgSet()
-function dirG (dir) {
-    
-    let dirgradient = dir 
-    
-    
-    
-}
 
 btn_generate.addEventListener("click",(e)=>{
 
@@ -64,13 +58,6 @@ bottons.forEach(element => {
 });
 
 
-
-function ff(cc) {
-    bgSet(cc) 
-}
-
-
-console.log(bottons);
 color2.addEventListener("input",(e)=>{
 
     codecolor2 = color2.value
@@ -84,9 +71,11 @@ color1.addEventListener("input",(e)=>{
     
 })
 
-
-
-
+copy.addEventListener("click", (e)=>{
+    alert("کد css کپی شد ")
+    navigator.clipboard.writeText(codeC.value)
+    
+})
 
 
 
